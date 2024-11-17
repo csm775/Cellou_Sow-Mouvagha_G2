@@ -2,6 +2,20 @@
     margin: 0;
 }
 
+@font-face {
+  font-family: Banger;
+  src: url(polices/Bangers-Regular.ttf);
+}
+
+@font-face {
+  font-family: Permanent;
+  src: url(polices/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+  font-family: Merri;
+  src: url(polices/Merriweather-Regular.ttf);
+}
 
 header{
     display: flex;
@@ -9,6 +23,11 @@ header{
     background-color: #007849;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+header h1{
+  margin-top: 30px;
+  color: #FFF;
 }
 
 header img{
@@ -35,14 +54,30 @@ nav ul a:hover{
     transform: scale(2);
 }
 
-#fond img{
-    opacity: 0.5;
-    object-fit: cover;
+
+.presentation{
+    position: relative;
     width: 100%;
-    background-color: unset;
+    height: 800px;
+    overflow: hidden;
 }
 
-.overlay h1{
+.presentation img{
+    width: 100%;
+    height: 800px;
+    opacity: 0;  
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.presentation img.active {
+  opacity: 0.3;
+}
+
+.overlay h2{
     font-size: 50px;
 }
 
@@ -61,6 +96,7 @@ nav ul a:hover{
 #Découvrir{
     display: flex;
     background-color: #F5DEB3;
+    padding: 100px;
   }
   
   .intro {
@@ -68,14 +104,11 @@ nav ul a:hover{
     align-items: center;
     padding: 50px;
     background-color:#FFD700; 
-    margin-left: 300px;
     border-radius: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 100%;
   }
   
   .text {
-    max-width: 600px;
     margin-right: 20px;
   }
   
@@ -133,11 +166,14 @@ nav ul a:hover{
   
 #ethnie{
   margin-bottom: 100px;
+  margin-right: 65px;
 }
 
 #ethnie h1{
   font-size: 50px;
   margin-top: 30px;
+  font-family: Permanent;
+  margin-left: 30px;
 }
 
 .peuple{
@@ -146,11 +182,19 @@ nav ul a:hover{
   background-color: #007849;
   width: 100%;
   padding: 30px;
+  margin-top: 20px;
 }
 
 .peuple h2{
-  font-size: 20px;
+  font-size: 23px;
   margin-bottom: 10px;
+  font-family: Banger;
+}
+
+.peuple p{
+  font-size: 12px;
+  margin-top: 10px;
+  font-family: Merri;
 }
 
 .peuple img{
@@ -185,4 +229,236 @@ nav ul a:hover{
   border-radius: 20px;
   width: 17%;
   padding: 25px;
+}
+
+.bidane:hover{
+  background-color: #917769;
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
+
+.soninke:hover{
+  background-color: #917769;
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
+
+.peul:hover{
+  background-color: #917769;
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
+
+.haratine:hover{
+  background-color: #917769;
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
+
+@media (max-width: 768px){
+ 
+  header img{
+    height: 60px;
+    margin-left: 10px;
+  }
+
+  header h1{
+  display: none;
+  }
+
+  .nav-links ul{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .nav-links ul a{
+    font-size: 25px;
+  }
+
+  .overlay{
+    top: 40%;
+  }
+
+  .overlay h2{
+    font-size: 20px;
+  }
+
+  .text p{
+    font-size: 15px;
+  }
+
+  .text h3{
+    font-size: 20px;
+  }
+
+  .intro{
+    padding: 20px;
+  }
+
+  footer h3{
+    font-size: 25px;
+  }
+
+  footer p{
+    font-size: 15px;
+  }
+
+  .peuple{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #007849;
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+  }
+
+#ethnie h1{
+  font-size: 30px;
+}
+
+.peuple img{
+  height: 200px;
+
+}
+
+.peuple h2{
+  font-size: 20px;
+}
+
+.peuple p{
+  font-size: 10px;
+}
+
+.bidane{
+  background-color: #F5DEB3;
+  border-radius: 20px;
+  width: 40%;
+  padding: 25px;
+}
+
+.peul{
+  background-color: #F5DEB3;
+  border-radius: 20px;
+  width: 40%;
+  padding: 25px;
+}
+
+.soninke{
+  background-color: #F5DEB3;
+  border-radius: 20px;
+  width: 40%;
+  padding: 25px;
+}
+
+.haratine{
+  background-color: #F5DEB3;
+  border-radius: 40px;
+  width: 40%;
+  padding: 25px;
+}
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+  header img{
+    height: 80px;
+    margin-left: 20px;
+  }
+
+  header h1{
+  font-size: 20px;
+  }
+
+  .nav-links ul{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+
+  .nav-links ul a{
+    font-size: 30px;
+  }
+
+  .overlay{
+    top: 30%;
+  }
+
+  .overlay h2{
+    font-size: 30px;
+  }
+
+  .text p{
+    font-size: 15px;
+  }
+
+  .text h3{
+    font-size: 20px;
+  }
+
+  .intro{
+    padding: 20px;
+  }
+
+  footer h3{
+    font-size: 25px;
+  }
+
+  footer p{
+    font-size: 15px;
+  }
+
+  .peuple{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #007849;
+    width: 100%;
+    padding: 30px;
+    margin-top: 20px;
+  }
+
+#ethnie h1{
+  font-size: 30px;
+}
+
+.peuple img{
+  height: 200px;
+
+}
+
+.peuple h2{
+  font-size: 20px;
+}
+
+.peuple p{
+  font-size: 10px;
+}
+
+.bidane{
+  background-color: #F5DEB3;
+  border-radius: 20px;
+  width: 40%;
+  padding: 25px;
+}
+
+.peul{
+  background-color: #F5DEB3;
+  border-radius: 20px;
+  width: 40%;
+  padding: 25px;
+}
+
+.soninke{
+  background-color: #F5DEB3;
+  border-radius: 20px;
+  width: 40%;
+  padding: 25px;
+}
+
+.haratine{
+  background-color: #F5DEB3;
+  border-radius: 40px;
+  width: 40%;
+  padding: 25px;
+}
 }
